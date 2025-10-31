@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact Us</title>
+    <link rel="stylesheet" href="ContactUs.css">
+	<link rel="icon" type="image/x-icon" href="book-stack.png">
+</head>
+<body>
+	<h1>Contact Us</h1>
+	<form method="post" action="Get back.html">
+		<label for="name">Name:</label>
+		<input type="text" id="name" name="name" required>
+
+		<label for="email">Email:</label>
+		<input type="email" id="email" name="email" required>
+
+		<label for="message">Message:</label>
+		<textarea id="message" name="message" required></textarea>
+
+		<input onclick="proceed()" type="submit" value="submit">
+            <p Id="demo"></p> 
+			<script>
+				function proceed() 
+{
+  var i;
+  if (confirm("Are you sure you want to contact us?")) 
+{
+    c="You said Proceed!";
+  } 
+else 
+{
+    i= "You said Cancel";
+ }
+doucment.get
+  document.getElementById("demo").innerHTML = i;
+}
+			</script>
+        <footer>
+            <p><a href="a1.html">Home</a> | <a href="About Us.html">About Us</a> | <a href="ContactUs.html">Contact Us</a> | <a href="FeedbackForm1.html">Feedback Form</a></p>
+                <p>&copy; 2023 <a href="a1.html">My Website</a></p>
+          </footer> 
+	</form>
+</body>
+</html>

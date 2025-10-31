@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Feedback Form</title>
+	<link rel="icon" type="image/x-icon" href="book-stack.png">
+	<link rel="stylesheet" type="text/css" href="FeedbackForm1.css">
+	<style>
+        footer {
+        background-color: #330033;
+        color: #8BC34A;
+        padding: 20px;
+        text-align: center;
+    }
+    footer a {
+        color: aliceblue;
+        text-decoration: none;
+        margin: 10 10px;
+    }
+    footer a:hover {
+        color: #ddd;
+        text-decoration: underline;
+    }
+	
+      </style>
+</head>
+<body>
+	<div class="wrapper">
+		<header>
+			<h1>Feedback Form</h1>
+		</header>
+		<main>
+			<form method="post" action="feedback.html">
+				<div class="form-group">
+					<label for="name">Name:</label>
+					<input type="text" name="name" id="name" required>
+				</div>
+				<div class="form-group">
+					<label for="email">Email:</label>
+					<input type="email" name="email" id="email" required>
+				</div>
+				<div class="form-group">
+					<label for="message">Message:</label>
+					<textarea name="message" id="message" rows="5" required></textarea>
+				</div>
+				<input onclick="proceed()" type="submit" value="submit">
+            <p Id="demo"></p> <br>
+			<input type="reset" value="clear">
+				
+			</form>
+		</main>
+		<script>
+			function proceed() 
+{
+  var i;
+  if (confirm("Are you sure you want to submit your feedback?")) 
+{
+    c="You said Proceed!";
+  } 
+else 
+{
+    i= "You said Cancel";
+ }
+doucment.get
+  document.getElementById("demo").innerHTML = i;
+}
+		</script>
+		<footer>
+			<p><a href="a1.html">Home</a> | <a href="About Us.html">About Us</a> | <a href="ContactUs.html">Contact Us</a> | <a href="FeedbackForm1.html">Feedback Form</a></p>
+			<p>© 2023 <a href="a1.html">My Website</a>. All rights reserved.</p>
+		</footer>
+	</div>
+</body>
+</html>

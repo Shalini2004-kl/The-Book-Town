@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Request a book</title>
+        <link rel="icon" type="image/x-icon" href="book-stack.png">
+        <link rel="stylesheet" href="form.css">
+        
+        <style>
+          footer {
+          background-color: #330033;
+          color: #8BC34A;
+          padding: 20px;
+          text-align: center;
+        }
+        footer a {
+          color: #fff;
+          text-decoration: none;
+          margin:  20 20px;
+        }
+        footer a:hover {
+          color: #ddd;
+          text-decoration: underline;
+        }
+        #slider-value {
+  float: right;
+}
+
+        </style>
+    </head>
+    <body>
+        <form method="post" enctype="text/plain" action="mailto:rajn2037@gmail.com">
+            <h2>Request a Book</h2>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name here"required> 
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email here"required> 
+
+            <label for="number">Mobile Number:</label>
+            <input type="tel" id="phone" name="phone" maxlength="10" placeholder="Enter your number" required>
+
+            <label for="book-title">Book Title:</label>
+            <input type="text" id="book-title" name="book-title"placeholder="Enter your book-title here"  required> 
+            
+            <label for="author">Author:</label>
+            <input type="text" id="author" name="author" placeholder="Enter your Author name here" required> 
+            <label for="isbn">ISBN:</label>
+            <input type="text" id="isbn" name="isbn" maxlength="13" placeholder="Enter your ISBN here"> 
+            
+            <label for="range-slider">Select a Quantity:</label>
+            <input type="range" id="range-slider" name="range" min="0" max="100" value="0">
+            <textarea style="position: relative; left: 450px ; padding: 10px; margin-bottom: 20px; border-radius: 5px; border: 1px solid #ccc; width:30px" id="slider-value"> </textarea>           
+             
+            <label for="comments">Comments:</label>
+            <textarea id="comments" style="padding: 10px; margin-bottom: 20px; border-radius: 5px; border: 1px solid #ccc;" rows="5" cols="10" name="comments" placeholder="Enter your comments here"></textarea> 
+        
+            <button onclick="proceed()" type="submit">Submit Request</button> 
+            <p Id="demo"></p>
+            <button type="reset">Clear</button>  <br> <br>
+          </form>
+          <footer>
+            <p><a href="a1.html">Home</a> | <a href="About Us.html">About Us</a> | <a href="ContactUs.html">Contact Us</a> | <a href="FeedbackForm1.html">Feedback Form</a></p>
+                <p>&copy; 2023 <a href="a1.html">My Website</a></p>
+          <script>
+             const rangeSlider = document.getElementById("range-slider");
+        const sliderVal = document.getElementById("slider-value");
+    
+        sliderVal.textContent = rangeSlider.value; // Set the initial value of the slider text area
+    
+          rangeSlider.oninput = function() 
+    {
+      sliderVal.textContent = this.value; // Update the value of the slider text area
+    }
+            // Phone number validation
+            const phoneInput = document.getElementById("phone");
+
+// Regular expression for a valid 10-digit phone number
+const phoneRegex = /^\d{10}$/;
+
+phoneInput.addEventListener("input", () => {
+  if (phoneRegex.test(phoneInput.value)) {
+    phoneInput.setCustomValidity(""); // clear any previous error message
+  } else {
+    phoneInput.setCustomValidity("Please enter a valid 10-digit phone number");
+  }
+});
+
+
+// Email validation
+function isValidEmail(email) {
+  // Check if the email matches the regular expression pattern
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+// Usage example
+console.log(isValidPhoneNumber("+91 9123456789")); // true
+console.log(isValidPhoneNumber("555-1234")); // false
+console.log(isValidEmail("example@example.com")); // true
+console.log(isValidEmail("example.com")); // false
+function proceed() 
+{
+  var i;
+  if (confirm("Are you sure you want to submit your request?")) 
+{
+    c="You said Proceed!";
+  } 
+else 
+{
+    i= "You said Cancel";
+ }
+doucment.get
+  document.getElementById("demo").innerHTML = i;
+}
+  </script>
+</body>
+</html>          
